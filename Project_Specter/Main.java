@@ -47,19 +47,19 @@ public class Main
             menuAns = menu.trainMenu();
             if(menuAns == 1)
             {
-                
+                train.game();
             }
             else if(menuAns == 2)
             {
-                
+                train.pc();
             }
             else if(menuAns == 3)
             {
-                
+                train.gfuel();
             }
             else
             {
-                
+                train.bengay();
             }
         }
         else

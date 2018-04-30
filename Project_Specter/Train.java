@@ -1,4 +1,4 @@
-
+import java.util.*;
 /**
  * Write a description of class Train here.
  * 
@@ -7,27 +7,45 @@
  */
 public class Train
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class Train
-     */
+    final private int GAME_BUILD_INC = 2;
+    final private int GAME_AIM_INC = 2;
+    final private int PC_INC = 10;
+    final private int GFUEL_BUILD_INC = 10;
+    final private int BENGAY_AIM_INC = 10;
+    
+    Character chr;
+    Scanner user;
+    
     public Train()
     {
-        // initialise instance variables
-        x = 0;
+        chr = new Character();
+        user = new Scanner(System.in);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
+    
+    public void game()
     {
-        // put your code here
-        return x + y;
+        System.out.print("\f");
+        
+        chr.setBuild(GAME_BUILD_INC);
+        chr.setAim(GAME_BUILD_INC);
+        
+        chr.displayStats();
+        System.out.println("Press Enter...");
+        user.nextLine();
+    }
+    
+    public void pc()
+    {
+        System.out.print("\f");
+    }
+    
+    public void gfuel()
+    {
+        System.out.print("\f");
+    }
+    
+    public void bengay()
+    {
+        System.out.print("\f");
     }
 }
