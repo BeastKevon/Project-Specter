@@ -85,6 +85,7 @@ public class Menu
         {
             System.out.println("1. Train");
             System.out.println("2. Stream");
+            System.out.println("9. Quit");
             System.out.print("Answer: ");
             menuAns = user.nextInt();
             
@@ -93,6 +94,10 @@ public class Menu
                 break;
             }
             else if(menuAns == 2)
+            {
+                break;
+            }
+            else if(menuAns == 9)
             {
                 break;
             }
@@ -111,9 +116,9 @@ public class Menu
             chr.displayStats();
             
             System.out.println("1. Play a game");
-            System.out.println("2. Upgrade PC");
-            System.out.println("3. Buy GFuel");
-            System.out.println("4. Buy Bengay");
+            System.out.println("2. Upgrade PC ($500)");
+            System.out.println("3. Buy GFuel ($100)");
+            System.out.println("4. Buy Bengay ($100)");
             System.out.print("Answer: ");
             menuAns = user.nextInt();
             
