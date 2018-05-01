@@ -40,34 +40,31 @@ public class Main
 
     public void runGame()
     {
-        while(true)
+        menuAns = menu.decMenu();
+        
+        if(menuAns == 1)
         {
-            menuAns = menu.decMenu();
-
+            menuAns = menu.trainMenu();
             if(menuAns == 1)
             {
-                menuAns = menu.trainMenu();
-                if(menuAns == 1)
-                {
-                    train.game();
-                }
-                else if(menuAns == 2)
-                {
-                    train.pc();
-                }
-                else if(menuAns == 3)
-                {
-                    train.gfuel();
-                }
-                else
-                {
-                    train.bengay();
-                }
+                train.game();
+            }
+            else if(menuAns == 2)
+            {
+                train.pc();
+            }
+            else if(menuAns == 3)
+            {
+                train.gfuel();
             }
             else
             {
-
+                train.bengay();
             }
+        }
+        else
+        {
+            
         }
     }
 }//end class

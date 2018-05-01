@@ -13,13 +13,13 @@ public class Character
     private int rNum;
 
     private int menuAns;
-   
+
     private static int myBuild;
     private static int myAim;
     private static int myPC;
     private static int myStream;
     private static int myMoney;
-    
+
     private static String name;
     public Character()
     {
@@ -32,30 +32,30 @@ public class Character
         myStream = 0;
         myMoney = 100;
     }
-    
+
     public void create()
     {
         name();
         rollStats();
     }
-    
+
     private void name()
     {
         System.out.print("Character Name: ");
         name = user.nextLine();
         System.out.print("\f");
     }
-    
+
     private void rollStats()
     {
         rollBuild();
         rollAim();
         rollPC();
         rollStream();
-        
+
         initDisplayStats();
     }
-    
+
     private void rollBuild()
     {
         myBuild = getRand();
@@ -75,14 +75,14 @@ public class Character
     {
         myStream = getRand();
     }
-    
+
     private int getRand()
     {
         rNum = rand.nextInt(3) + 1;
 
         return rNum;
     }
-    
+
     private void initDisplayStats()
     {
         System.out.println("                STATS (1 to 100)");
@@ -102,11 +102,11 @@ public class Character
         System.out.println("PC              - " + myPC);
         System.out.println("STREAM          - " + myStream);
         System.out.println("MONEY          - $" + myMoney);
-        
+
         System.out.print("Press Enter to Continue...");
         user.nextLine();
     }
-    
+
     public void displayStats()
     {
         System.out.println("                STATS (1 to 100)");
@@ -127,48 +127,66 @@ public class Character
         System.out.println("STREAM          - " + myStream);
         System.out.println("MONEY          - $" + myMoney);
     }
-    
+
     public void setBuild(int num)
     {
         myBuild += num;
     }
+
     public void setAim(int num)
     {
         myAim += num;
     }
+
     public void setPC(int num)
     {
         myPC += num;
     }
+
     public void setStream(int num)
     {
         myStream += num;
     }
-    public void setMoney(int num)
+
+    public boolean setMoney(int num)
     {
-        myMoney += num;
+        if(myMoney + num >= 0)
+        {
+            myMoney += num;
+            return true;
+        }
+        else
+        {
+            System.out.println("Insufficient Funds");
+            return false;
+        }
     }
-    
+
     public int getBuild()
     {
         return myBuild;
     }
+
     public int getAim()
     {
         return myAim;
     }
+
     public int getPC()
     {
         return myPC;
     }
+
     public int getStream()
     {
         return myStream;
     }
+
     public int getMoney()
     {
         return myMoney;
     }
+
     public String getName()
     {
         return name;
